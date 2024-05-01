@@ -4,6 +4,16 @@
 
 - Python 3.x
 - Poetry (optional)
+- `extras.zip` file containing the following:
+    - `data/test/lfw` containing the LFW dataset
+    - `data/test/cfp_fp` containing the CFP-FP dataset
+    - `data/test/cplfw` containing the CPLFW dataset
+    - `data/test/calfw` containing the CALFW dataset
+    - `data/test/agedb_30` containing the AgeDB-30 dataset
+    - `data/train/` sample training data
+    - `data/val/` sample validation data
+    - `weights/` containing the pre-trained AdaFace models
+
 
 ## Installation
 
@@ -13,13 +23,20 @@
     git clone https://github.com/nosebastian/AdaFaceMin.git
     ```
 
-2. Change into the project directory:
+2. Unzip the `extras.zip` file:
+
+    ```shell
+    mv /path/to/extras.zip .
+    unzip extras.zip
+    ```
+
+3. Change into the project directory:
 
     ```shell
     cd AdaFaceMin
     ```
 
-3. Install project dependencies using Poetry:
+4. Install project dependencies using Poetry:
 
     ```shell
     poetry install
@@ -36,7 +53,7 @@
 2. Run the project:
 
     ```shell
-    python train.py
+    python train.py --train --test
     ```
 
     For help page see:
