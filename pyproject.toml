@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "adafacemin"
+version = "0.1.0"
+description = ""
+authors = ["Marek Vaško <ivasko@fit.vut.cz>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+lightning = "^2.2.3"
+torch = "^2.3.0"
+torchvision = "^0.18.0"
+pytorch-metric-learning = "^2.5.0"
+tqdm = "^4.66.2"
+matplotlib = "^3.8.4"
+numpy = "^1.26.4"
+tensorboardx = "^2.6.2.2"
+pillow = "^10.3.0"
+pandas = "^2.2.2"
+scikit-learn = "^1.4.2"
+tensorboard = "^2.16.2"
+torch-tb-profiler = "^0.4.3"
+torchmetrics = "^1.3.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
