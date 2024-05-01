@@ -66,7 +66,7 @@ class FaceRecognitionModel(LightningModule):
         images, labels = batch
         embeddings, norms = self.model(images)
         self.test_accuracy.update(embeddings, labels['index'], labels['pair_label'])
-        self.log('test_accuracy', self.test_accuracy, on_step=False, on_epoch=True)
+        self.log('test_accuracy', self.test_accuracy, on_step=False, on_epoch=True, rank_zero_only=True)
 
     def configure_optimizers(self):
         optimizer = getattr(optim, self.optimizer)(self.parameters(), **self.optimizer_kwargs)

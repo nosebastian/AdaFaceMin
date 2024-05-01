@@ -6,8 +6,8 @@ from ..evaluate_utils import evaluate
 __all__: list[str] = ['LFWFlavourAccuracy']
 
 class LFWFlavourAccuracy(Metric):
-    def __init__(self, nrof_folds=10, pca=0, dist_sync_on_step=False):
-        super().__init__(dist_sync_on_step=dist_sync_on_step)
+    def __init__(self, nrof_folds=10, pca=0):
+        super().__init__(dist_sync_on_step=True)
         self.n_folds = nrof_folds
         self.pca = pca
         self.add_state("embeddings", default=[], dist_reduce_fx="cat")
