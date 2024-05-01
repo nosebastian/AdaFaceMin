@@ -10,13 +10,13 @@
 1. Clone the repository:
 
     ```shell
-    git clone https://github.com/your-username/your-repo.git
+    git clone https://github.com/nosebastian/AdaFaceMin.git
     ```
 
 2. Change into the project directory:
 
     ```shell
-    cd your-repo
+    cd AdaFaceMin
     ```
 
 3. Install project dependencies using Poetry:
@@ -36,7 +36,13 @@
 2. Run the project:
 
     ```shell
-    python main.py
+    python train.py
+    ```
+
+    For help page see:
+    
+    ```shell
+    python train.py --help
     ```
 
 ## Creating a Virtual Environment with requirements.txt
@@ -65,7 +71,7 @@
     python train.py
     ```
 
-    For heplp page see:
+    For help page see:
     
     ```shell
     python train.py --help
